@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// Header styles & layout
+// -----------------------------------------------------------------------------
+
+
+.header {
+  background: center / cover no-repeat;
+
+  text-align: center;
+}
+
+
+/*
+   Home page header
+   ========================================================================== */
+
+
+.header--home {
+  background-image: url("../../../assets/images/home-hero-mobile.jpg");
+  height: 650px;
+  padding-top: 115px;
+}
+
+.header--home__title {
+  margin-bottom: 1.5rem;
+}
+
+.header--home__text {
+  color: $clr-white;
+  margin-bottom: 2.125rem;
+}

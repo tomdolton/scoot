@@ -1,0 +1,60 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $clr-dark-navy;
+  font-family: $ff-body;
+  font-size: 0.9375rem;
+}
+
+p {
+  line-height: 1.667;
+}
+
+
+h1, h2, h3, h4 {
+  color: $clr-dark-navy;
+  font-family: $ff-headings;
+  font-weight: 700;
+}
+
+
+
+h1 {
+  color: $clr-white;
+  font-size: 2.5rem;
+  letter-spacing: -2.5px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: -2.14px;
+}
+
+h3 {
+  font-size: 2.5rem;
+  letter-spacing: -1.79px;
+}
+
+h4 {
+  font-size: 1.5rem;
+  letter-spacing: -1.07px;
+}
+
+
+
+@media (min-width: $bp-large) {
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+  
+  h4 {
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,181 @@
+// -----------------------------------------------------------------------------
+// Nav styles & layout
+// -----------------------------------------------------------------------------
+
+
+//
+// Base nav container styles
+// ==========================================================================
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  position: relative; // Make visible above modal when active
+  z-index: 1;
+  background: white;
+}
+
+
+
+//
+// Mobile nav
+// ==========================================================================
+
+.nav__links {
+  display: none;
+}
+
+
+
+.nav__btn {
+  display: none;
+}
+
+
+
+.nav__hamburger {
+  background: center / cover no-repeat url("../../../assets/icons/hamburger.svg");
+  width: 20px;
+  height: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav__hamburger--active {
+  background: center / cover no-repeat url("../../../assets/icons/close.svg");
+}
+
+
+
+.nav__links--mobile {
+  background: $clr-dark-navy;
+
+  position: absolute;
+  top: 64px;
+  left: -100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 68%;
+  max-width: 256px;
+  height: calc(100vh - 64px);
+  padding: 4rem 1.5rem 1.5rem;
+
+  transition: $transition;
+  opacity: 0;
+
+  & li {
+    margin-bottom: 1.5rem;
+  }
+
+  & a {
+    color: $clr-white;
+    font-size: 1.125rem;
+    padding: 0.5rem;
+  
+    @include on-event {
+      color: $clr-yellow;
+    }
+  }
+
+}
+
+.nav__links--active {
+  left: 0;
+  opacity: 1;
+} 
+
+
+
+.modal {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85));
+  opacity: 0;
+  transition: $transition;
+}
+
+.modal--active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  opacity: 1;
+}
+
+
+
+
+
+.nav__logo {
+  background: center / contain no-repeat url("../../../assets/logo.svg");
+  display: inline-block;
+  width: 75.5px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+
+
+
+//
+// Medium screens nav
+// ==========================================================================
+@media (min-width: $bp-medium) {
+
+  .nav {
+    justify-content: space-between;
+  }
+
+
+  .nav__hamburger {
+    display: none;
+  }
+
+
+  .nav__logo {
+    width: 108px;
+    height: 29px;
+    margin: 0;
+  }
+
+
+  .nav__links {
+    display: flex;
+    justify-content: space-around;
+
+    & li:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+
+  .nav__btn {
+    display: inline-block;
+  }
+}
+
+
+
+@media (min-width: $bp-large) {
+
+  .nav {
+    justify-content: flex-start;
+  }
+
+
+  .nav__links {
+    margin-left: 3.5rem;
+  }
+
+  .nav__btn {
+    margin-left: auto;
+  }
+}

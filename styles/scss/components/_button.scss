@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// Button component
+// -----------------------------------------------------------------------------
+
+.btn {
+  background: $clr-yellow;
+  color: $clr-white;
+  font-family: $ff-headings;
+  line-height: 1.667;
+  display: inline-block;
+  border: 3px $clr-yellow solid;
+  padding: 11px 36.5px;  //ToDo: check this 
+  cursor: pointer;
+  transition: $transition;
+
+  @include on-event {
+    background-color: $clr-white;
+    color: $clr-yellow;
+  }
+}
