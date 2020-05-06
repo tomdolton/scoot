@@ -5,7 +5,6 @@
 
 .header {
   background: center / cover no-repeat;
-
   text-align: center;
 }
 
@@ -14,18 +13,108 @@
    Home page header
    ========================================================================== */
 
-
 .header--home {
   background-image: url("../../../assets/images/home-hero-mobile.jpg");
   height: 650px;
   padding-top: 115px;
+  position: relative;
+
+  @media (min-width: $bp-medium) {
+    background-image: url("../../../assets/images/home-hero-tablet.jpg");
+  }
+
+  @media (min-width: $bp-large) {
+    background-image: url("../../../assets/images/home-hero-desktop.jpg");
+    padding-top: 153px;
+  }
 }
+
+
+
+.header--home__textbox {
+  max-width: 573px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: $bp-large) {
+    text-align: left;
+    max-width: 500px;
+    margin-left: 0;
+  }
+}
+
+
 
 .header--home__title {
   margin-bottom: 1.5rem;
+
+  @media (min-width: $bp-large) {
+    margin-bottom: 2.5rem;
+  }
 }
+
+
 
 .header--home__text {
   color: $clr-white;
   margin-bottom: 2.125rem;
+
+  @media (min-width: $bp-large) {
+    margin-left: 95px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+
+
+@media (min-width: $bp-large) {
+
+  .header--home__text,
+  .header--home__btn {
+    margin-left: 95px;
+  }
+}
+
+
+
+//
+// Patterns psuedo elements
+// ==========================================================================
+// Arrow
+.header--home__textbox::after {
+  content: url("../../../assets/patterns/right-arrow.svg");
+  position: absolute;
+  right: 62%;
+  bottom: -150px;
+
+  // Not visible on very small screens
+  @media (max-width: 306px) {
+    content: "";
+  }
+
+  @media (min-width: $bp-large) {
+    right: -100%;
+    bottom: 0;
+  }
+}
+
+// Other patterns on large screen
+@media (min-width: $bp-large) {
+
+  // Line
+  .header--home__textbox::before {
+    content: url("../../../assets/patterns/line.svg");
+    position: absolute;
+    right: 93%;
+    bottom: 135px;
+  }
+
+  // White circles
+  .header--home::after {
+    content: url("../../../assets/patterns/white-circles.svg");
+    position: absolute;
+    right: -48px;
+    bottom: 164px;
+  }
+
 }

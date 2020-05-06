@@ -1,0 +1,62 @@
+// -----------------------------------------------------------------------------
+// Main-content sections styles & layout
+// -----------------------------------------------------------------------------
+
+.main-content {
+  text-align: center;
+  margin-bottom: 7.5rem;
+  position: relative;
+}
+
+
+
+.main-content__image {
+  border-radius: 50%;
+  margin-bottom: 3.5rem;
+}
+
+
+
+.main-content__title,
+.main-content__text {
+  margin-bottom: 2rem;
+}
+
+
+/*
+   Arrow images
+   ========================================================================== */
+
+// Arrow images standard position (Home page 1st position)
+.main-content::before {
+  content: url("../../../assets/patterns/left-downward-arrow.svg");
+  position: absolute;
+}
+
+.main-content.main-content--reversed::before {
+  content: url("../../../assets/patterns/right-arrow.svg");
+}
+
+
+
+
+/*
+   Arrow positioning
+   ========================================================================== */
+// Home page 1st position // Other page...
+.arrow-pos-1::before {
+  right: -420px;
+  top: 165px;
+}
+
+// Home page 2nd position // Maybe other page..?
+.arrow-pos-2::before {
+  left: -200px;
+  top: -10px;
+}
+
+// Home page 3rd position //
+.arrow-pos-3::before {
+  right: -520px;
+  top: 0px;
+}

@@ -17,12 +17,16 @@
 
 // 4. Components
 @import
-  'components/button';
+  'components/button',
+  'components/links';
 
 // 5. Layout-related sections
 @import
   'layout/nav',
   'layout/header',
+  'layout/intro',
+  'layout/main-content',
+  'layout/download',
   'layout/footer';
 
 // 6. Page-specific styles

@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// Links component
+// -----------------------------------------------------------------------------
+
+
+.link {
+  color: $clr-mid-grey;
+  display: inline-block;
+  font-size: 1.125rem;
+  padding: 0.5rem;
+
+  @include on-event {
+    color: $clr-yellow;
+  }
+}

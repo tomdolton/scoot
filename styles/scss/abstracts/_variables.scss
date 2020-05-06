@@ -13,6 +13,7 @@ $ff-body: 'Lexend Deca', sans-serif;
 
 // Copy text color
 $clr-yellow: hsl(40, 97%, 58%);
+$clr-dark-stone: hsl(213, 16%, 25%);
 $clr-dark-navy: hsl(216, 17%, 35%);
 $clr-mid-grey: hsl(217, 12%, 62%);
 $clr-light-grey: hsl(212, 41%, 93%);
@@ -22,8 +23,8 @@ $clr-white: #fff;
 
 
 
-// Container's maximum width
-$max-width: 1180px;
+// Container's maximum width (+ padding left + padding right)
+$max-width-large: 1110px + 32px + 32px;
 
 
 

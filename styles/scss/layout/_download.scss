@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// Main-content sections styles & layout
+// -----------------------------------------------------------------------------
+
+.download {
+  background-color: $clr-dark-navy;
+  position: relative;
+  text-align: center;
+  padding-top: 88px;
+  padding-bottom: 76px;
+}
+
+
+
+.download__title {
+  color: $clr-white;
+  margin-bottom: 2.5rem;
+}
+
+
+
+.download__image {
+  height: 40px;
+  width: auto;
+
+  &:first-child {
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+
+
+// Semi circle background patterns
+.download::before {
+  content: url("../../../assets/patterns/semi-circles.svg");
+  position: absolute;
+  left: -600px;
+  right: -100px;
+  bottom: -3px;
+}
