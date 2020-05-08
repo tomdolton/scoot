@@ -9,13 +9,18 @@
   padding-bottom: 88px;
 }
 
+
+
 .footer__links {
   margin-bottom: 85px;
 }
 
+
+
 .footer__links .link {
   margin-bottom: 1rem;
 }
+
 
 
 .footer__socials {
@@ -23,7 +28,12 @@
   justify-content: space-between;
   max-width: 120px;
   margin: 0 auto;
+
+  & li:not(:last-child) {
+    margin-right: 24.5px;
+  }
 }
+
 
 
 .footer__logo {
@@ -34,3 +44,40 @@
   height: 28.56px;
   margin-bottom: 2.6rem;
 }
+
+
+
+/*
+   Medium screens layout
+   ========================================================================== */
+
+  @media (min-width: $bp-medium) {
+
+    .footer .container {
+      @include flex(row, flex-start);
+    }
+
+    .footer__links {
+      @include flex;
+      margin-bottom: 0;
+
+      & .link {
+        padding: 0;
+        margin-right: 2rem;
+        margin-bottom: 0;
+      }
+  }
+ 
+    
+    .footer__logo {
+      margin-right: 58px;
+      margin-bottom: 0;
+    }
+
+    .footer__socials {
+      margin-right: 0;
+    }
+  
+
+
+  }

@@ -2,12 +2,15 @@
 // Main-content sections styles & layout
 // -----------------------------------------------------------------------------
 
+/*
+   Layout
+   ========================================================================== */
+
 .main-content {
   text-align: center;
   margin-bottom: 7.5rem;
   position: relative;
 }
-
 
 
 .main-content__image {
@@ -16,11 +19,62 @@
 }
 
 
-
-.main-content__title,
 .main-content__text {
-  margin-bottom: 2rem;
+  max-width: 573px;
+  margin: 0 auto 2rem;
 }
+
+
+.main-content__title {
+  max-width: 315px;
+  margin: 0 auto 2rem;
+}
+
+
+// Medium screen layout
+@media (min-width: $bp-medium) {
+
+  .main-content__title {
+    max-width: 450px;
+    margin-bottom: 2.5rem;
+  }
+
+
+  .main-content__text {
+    margin-bottom: 2.5rem;
+  }
+}
+
+
+// Large screen layout
+@media (min-width: $bp-large) {
+
+  .main-content {
+    @include flex(row-reverse);
+    text-align: left;
+  }
+
+
+  .main-content--reversed {
+    flex-direction: row;
+  }
+
+
+  .main-content__image {
+    margin-bottom: 0;
+  }
+
+
+  .main-content__title {
+    margin: 0 0 1.5rem;
+  }
+
+
+  .main-content__text {
+    max-width: 445px;
+  }
+}
+
 
 
 /*
@@ -33,30 +87,98 @@
   position: absolute;
 }
 
+
 .main-content.main-content--reversed::before {
   content: url("../../../assets/patterns/right-arrow.svg");
 }
 
 
 
-
 /*
    Arrow positioning
    ========================================================================== */
+
 // Home page 1st position // Other page...
 .arrow-pos-1::before {
   right: -420px;
   top: 165px;
+
+  @media (min-width: $bp-medium) {
+    right: 0px;
+    top: 300px;
+  }
+
+  @media (min-width: $bp-large) {
+    right: -135px;
+  }
 }
+
 
 // Home page 2nd position // Maybe other page..?
 .arrow-pos-2::before {
   left: -200px;
   top: -10px;
+
+  @media (min-width: $bp-medium) {
+    left: -100px;
+  }
+
+  @media (min-width: $bp-large) {
+    left: -135px;
+  }
 }
+
 
 // Home page 3rd position //
 .arrow-pos-3::before {
   right: -520px;
   top: 0px;
+
+  @media (min-width: $bp-medium) {
+    right: -370px;
+    top: 75px;
+  }
+
+  @media (min-width: $bp-large) {
+    right: -515px;
+  }
+}
+
+
+
+/*
+   Semicircle images
+   ========================================================================== */
+
+//  Medium screens
+@media (min-width: $bp-medium) {
+
+  .main-content::after {
+    content: url("../../../assets/patterns/circle.svg");
+    position: absolute;
+    right: -350px;
+    top: 0;
+    z-index: -1;
+  }
+
+
+  .main-content--reversed::after {
+    right: initial;
+    left: -350px;
+  }
+}
+
+
+// Large screens
+@media (min-width: $bp-large) {
+
+  .main-content::after {
+    right: -475px;
+  }
+
+
+  .main-content--reversed::after {
+    right: initial;
+    left: -475px;
+  }
 }

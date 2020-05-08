@@ -529,7 +529,7 @@ h4 {
   line-height: 1.667;
   display: inline-block;
   border: 3px #fcb72c solid;
-  padding: 11px 36.5px;
+  padding: 11px 41px;
   cursor: pointer;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
@@ -832,7 +832,7 @@ h4 {
 @media (min-width: 768px) {
   .intro {
     padding-top: 122px;
-    padding-bottom: 67px;
+    padding-bottom: 83px;
   }
   .intro__card {
     text-align: left;
@@ -902,6 +902,9 @@ h4 {
   }
 }
 
+/*
+   Layout
+   ========================================================================== */
 .main-content {
   text-align: center;
   margin-bottom: 7.5rem;
@@ -913,9 +916,58 @@ h4 {
   margin-bottom: 3.5rem;
 }
 
-.main-content__title,
 .main-content__text {
-  margin-bottom: 2rem;
+  max-width: 573px;
+  margin: 0 auto 2rem;
+}
+
+.main-content__title {
+  max-width: 315px;
+  margin: 0 auto 2rem;
+}
+
+@media (min-width: 768px) {
+  .main-content__title {
+    max-width: 450px;
+    margin-bottom: 2.5rem;
+  }
+  .main-content__text {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+  .main-content--reversed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .main-content__image {
+    margin-bottom: 0;
+  }
+  .main-content__title {
+    margin: 0 0 1.5rem;
+  }
+  .main-content__text {
+    max-width: 445px;
+  }
 }
 
 /*
@@ -938,14 +990,79 @@ h4 {
   top: 165px;
 }
 
+@media (min-width: 768px) {
+  .arrow-pos-1::before {
+    right: 0px;
+    top: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .arrow-pos-1::before {
+    right: -135px;
+  }
+}
+
 .arrow-pos-2::before {
   left: -200px;
   top: -10px;
 }
 
+@media (min-width: 768px) {
+  .arrow-pos-2::before {
+    left: -100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .arrow-pos-2::before {
+    left: -135px;
+  }
+}
+
 .arrow-pos-3::before {
   right: -520px;
   top: 0px;
+}
+
+@media (min-width: 768px) {
+  .arrow-pos-3::before {
+    right: -370px;
+    top: 75px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .arrow-pos-3::before {
+    right: -515px;
+  }
+}
+
+/*
+   Semicircle images
+   ========================================================================== */
+@media (min-width: 768px) {
+  .main-content::after {
+    content: url("../../../assets/patterns/circle.svg");
+    position: absolute;
+    right: -350px;
+    top: 0;
+    z-index: -1;
+  }
+  .main-content--reversed::after {
+    right: initial;
+    left: -350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content::after {
+    right: -475px;
+  }
+  .main-content--reversed::after {
+    right: initial;
+    left: -475px;
+  }
 }
 
 .download {
@@ -958,7 +1075,8 @@ h4 {
 
 .download__title {
   color: #fff;
-  margin-bottom: 2.5rem;
+  max-width: 315px;
+  margin: 0 auto 2.5rem;
 }
 
 .download__image {
@@ -966,9 +1084,8 @@ h4 {
   width: auto;
 }
 
-.download__image:first-child {
+a:first-of-type .download__image {
   margin-right: 0.75rem;
-  margin-bottom: 0.75rem;
 }
 
 .download::before {
@@ -977,6 +1094,62 @@ h4 {
   left: -600px;
   right: -100px;
   bottom: -3px;
+}
+
+@media (min-width: 768px) {
+  .download::before {
+    left: -230px;
+    right: -170px;
+  }
+}
+
+@media (min-width: 768px) {
+  .download::before {
+    left: 0px;
+    right: -650px;
+  }
+}
+
+@media (min-width: 768px) {
+  .download {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+  .download__title {
+    max-width: 460px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .download {
+    padding-top: 102px;
+    padding-bottom: 102px;
+  }
+  .download .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .download__title {
+    text-align: left;
+    margin: 0;
+  }
+  .download__image {
+    height: 56px;
+  }
+  a:first-of-type .download__image {
+    margin-right: 1.5rem;
+  }
 }
 
 .footer {
@@ -1005,6 +1178,10 @@ h4 {
   margin: 0 auto;
 }
 
+.footer__socials li:not(:last-child) {
+  margin-right: 24.5px;
+}
+
 .footer__logo {
   background: center/contain no-repeat url("../../../assets/logo-white.svg");
   fill: white;
@@ -1012,5 +1189,54 @@ h4 {
   width: 107.82px;
   height: 28.56px;
   margin-bottom: 2.6rem;
+}
+
+/*
+   Medium screens layout
+   ========================================================================== */
+@media (min-width: 768px) {
+  .footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0;
+  }
+  .footer__links .link {
+    padding: 0;
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+  .footer__logo {
+    margin-right: 58px;
+    margin-bottom: 0;
+  }
+  .footer__socials {
+    margin-right: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
