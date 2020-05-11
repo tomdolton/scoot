@@ -23,12 +23,20 @@ html {
 
 body {
   background: $clr-white;
+  text-align: center;
+  overflow-x: hidden;
+  /**
+   * @TODO
+   * take out text align center from all sections base layout
+   */
+  
+  
 }
 
 /**
  * Reset default padding and margin on block elements
  */
- h1, h2, h3, h4, p, ul, ol, li {
+ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   padding: 0;
   margin: 0;
 }

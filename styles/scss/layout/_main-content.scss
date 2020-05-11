@@ -145,6 +145,34 @@
 }
 
 
+// About page 1st position //
+.arrow-pos-4::before {
+  content: url("../../../assets/patterns/left-upward-arrow.svg");
+  right: -395px;
+  top: 130px;
+
+  @media (min-width: $bp-medium) {
+    right: 0px;
+    top: 260px;
+  }
+
+  @media (min-width: $bp-large) {
+    right: -165px;
+  }
+}
+
+
+// About page 2nd position //
+.arrow-pos-5::before {
+  left: -105px;
+  top: 0;
+
+  @media (min-width: $bp-large) {
+    left: -135px;
+  }
+}
+
+
 
 /*
    Semicircle images

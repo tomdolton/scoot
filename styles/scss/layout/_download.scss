@@ -11,13 +11,16 @@
 }
 
 
-
 .download__title {
   color: $clr-white;
   max-width: 315px;
   margin: 0 auto 2.5rem;
 }
 
+
+.download__link {
+  position: relative; // Displays links over semi circle background pattern
+}
 
 
 .download__image {
@@ -26,8 +29,7 @@
 }
 
 
-
-a:first-of-type .download__image {
+.download__link:first-of-type {
   margin-right: 0.75rem;
 }
 
@@ -66,7 +68,6 @@ a:first-of-type .download__image {
   }
 
 
-
   .download__title {
     max-width: 460px;
   }
@@ -86,11 +87,9 @@ a:first-of-type .download__image {
   }
 
 
-
   .download .container {
     @include flex;
   }
-
 
 
   .download__title {
@@ -99,14 +98,12 @@ a:first-of-type .download__image {
   }
 
 
-
   .download__image {
     height: 56px;
   }
 
 
-
-  a:first-of-type .download__image {
+  .download__link:first-of-type {
     margin-right: 1.5rem;
   }
 }

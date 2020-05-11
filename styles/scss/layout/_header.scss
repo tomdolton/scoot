@@ -2,11 +2,49 @@
 // Header styles & layout
 // -----------------------------------------------------------------------------
 
+//
+// Base header styles & full styles for all but Home header
+// ==========================================================================
 
 .header {
   background: center / cover no-repeat;
   text-align: center;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 72px;
+
+  @media (min-width: $bp-medium) {
+    text-align: left;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    margin-bottom: 144px;
+
+    // White circles
+    &::after {
+    content: url("../../../assets/patterns/white-circles.svg");
+    position: absolute;
+    right: -30px;
+    bottom: 60px;
+    }
+  }
+  
+  @media (min-width: $bp-large) {
+    margin-bottom: 120px;
+  }
 }
+
+
+
+.header__title {
+  max-width: 573px;
+  margin: 0 auto;
+
+  @media (min-width: $bp-large) {
+    margin-left: 0;
+  }
+}
+
 
 
 /*
@@ -17,10 +55,12 @@
   background-image: url("../../../assets/images/home-hero-mobile.jpg");
   height: 650px;
   padding-top: 115px;
-  position: relative;
+  text-align: center;
+  margin-bottom: 0;
 
   @media (min-width: $bp-medium) {
     background-image: url("../../../assets/images/home-hero-tablet.jpg");
+    padding-left: 0;
   }
 
   @media (min-width: $bp-large) {
@@ -118,3 +158,42 @@
   }
 
 }
+
+
+
+
+//
+// About header (background image)
+// ==========================================================================
+
+.header--about {
+  background-image: url("../../../assets/images/about-hero-mobile.jpg");
+
+  @media (min-width: $bp-medium) {
+    background-image: url("../../../assets/images/about-hero-tablet.jpg");
+  }
+
+  @media (min-width: $bp-large) {
+    background-image: url("../../../assets/images/about-hero-desktop.jpg");
+  }
+}
+
+
+
+//
+// Careers & Locations header (background image)
+// ==========================================================================
+
+.header--careers-location {
+  background-image: url("../../../assets/images/careers-location-hero-mobile.jpg");
+
+  @media (min-width: $bp-medium) {
+    background-image: url("../../../assets/images/careers-location-hero-tablet.jpg");
+  }
+
+  @media (min-width: $bp-large) {
+    background-image: url("../../../assets/images/careers-location-hero-desktop.jpg");
+  }
+}
+
+
