@@ -20,6 +20,15 @@
 }
 
 
+.nav__logo {
+  background: center / contain no-repeat url("../../../assets/logo.svg");
+  display: inline-block;
+  width: 75.5px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+
 
 //
 // Mobile nav
@@ -30,11 +39,9 @@
 }
 
 
-
 .nav__btn {
   display: none;
 }
-
 
 
 .nav__hamburger {
@@ -45,14 +52,15 @@
   display: inline-block;
 }
 
+
 .nav__hamburger--active {
   background: center / cover no-repeat url("../../../assets/icons/close.svg");
 }
 
 
-
 .nav__links--mobile {
   background: $clr-dark-navy;
+  text-align: left;
 
   position: absolute;
   top: 64px;
@@ -72,6 +80,7 @@
   
   & a {
     color: $clr-white;
+    font-size: 1.125rem;
   }
 
   & li {
@@ -80,16 +89,10 @@
 }
 
 
-
 .nav__links--active {
   left: 0;
   opacity: 1;
 }
-
-
-
-
-
 
 
 .modal {
@@ -97,6 +100,7 @@
   opacity: 0;
   transition: $transition;
 }
+
 
 .modal--active {
   position: fixed;
@@ -108,19 +112,6 @@
   opacity: 1;
   z-index: 1;;
 }
-
-
-
-
-
-.nav__logo {
-  background: center / contain no-repeat url("../../../assets/logo.svg");
-  display: inline-block;
-  width: 75.5px;
-  height: 20px;
-  margin: 0 auto;
-}
-
 
 
 
@@ -145,6 +136,7 @@
     margin: 0;
   }
 
+
   .nav__links {
     display: flex;
     justify-content: space-around;
@@ -155,7 +147,6 @@
   }
 
 
-
   .nav__btn {
     display: inline-block;
   }
@@ -163,6 +154,9 @@
 
 
 
+//
+// Large screens nav
+// ==========================================================================
 @media (min-width: $bp-large) {
 
   .nav {
@@ -174,6 +168,7 @@
     margin-left: 3.5rem;
   }
 
+  
   .nav__btn {
     margin-left: auto;
   }

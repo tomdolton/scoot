@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// Jobs styles & layout
+// -----------------------------------------------------------------------------
+
+
+.jobs {
+  margin-bottom: 7.5rem;
+}
+
+
+.jobs__item {
+  background: $clr-snow;
+  padding: 2.25rem 2rem 2rem; 
+  margin-bottom: 1rem;
+}
+
+
+.jobs__title {
+  margin-bottom: 0.25rem;
+}
+
+
+.jobs__location {
+  margin-bottom: 1rem;
+}
+
+
+.jobs__btn {
+  width: 100%;
+  max-width: 250px;
+}
+
+
+
+//
+// Medium screens
+// ==========================================================================
+
+@media (min-width: $bp-medium) {
+
+  .jobs__item {
+    @include flex;
+    padding: 2.125rem 3rem 2rem; 
+  }
+
+  .jobs__textbox {
+    text-align: left;
+  }
+
+  .jobs__title {
+    margin-bottom: 0.5rem;
+  }
+
+  .jobs__location {
+    margin-bottom: 0;
+  }
+
+  .jobs__btn {
+    max-width: 180px;
+  }
+}
+
+
+
+@media (min-width: $bp-large) {
+
+  .jobs {
+    margin-bottom: 10rem;
+  }
+
+  .jobs__item {
+    padding: 2rem 4rem 2.125rem 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+}

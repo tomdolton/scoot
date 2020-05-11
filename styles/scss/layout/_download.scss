@@ -31,6 +31,10 @@
 
 .download__link:first-of-type {
   margin-right: 0.75rem;
+
+  @media (max-width: 330px) {
+    margin-right: auto;
+  }
 }
 
 

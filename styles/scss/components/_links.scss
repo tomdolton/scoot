@@ -6,9 +6,10 @@
 .link {
   color: $clr-mid-grey;
   display: inline-block;
-  font-size: 1.125rem;
+  font-family: $ff-headings;
+  font-size: 0.9375rem;
   padding: 0.5rem;
-
+  
   @include on-event {
     color: $clr-yellow;
   }
