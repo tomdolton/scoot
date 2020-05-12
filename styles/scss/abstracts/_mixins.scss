@@ -12,10 +12,10 @@
 }
 
 
-// Flex default
-@mixin flex($direction: row, $justify: space-between) {
+// Display flex default
+@mixin flex($direction: row, $justify: space-between, $align: center) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
-  align-items: center;
+  align-items: $align;
 }

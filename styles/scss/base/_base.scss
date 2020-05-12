@@ -9,6 +9,7 @@ html {
   box-sizing: border-box;
 }
 
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -21,17 +22,17 @@ html {
   box-sizing: inherit;
 }
 
+
+/**
+ * Base body styles
+ * 1. Prevents side scroll caused by positioned patterns/images
+ */
 body {
   background: $clr-white;
   text-align: center;
   overflow-x: hidden;
-  /**
-   * @TODO
-   * take out text align center from all sections base layout
-   */
-  
-  
 }
+
 
 /**
  * Reset default padding and margin on block elements
@@ -40,6 +41,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 
 /**
  * Make images responsive
@@ -50,9 +52,7 @@ img {
   height: auto;
 }
 
-/**
- * Basic styles for links
- */
+
 a {
   color: $clr-mid-grey;
   text-decoration: none;
@@ -61,6 +61,7 @@ a {
     color: $clr-yellow;
   }
 }
+
 
 ul {
   list-style: none;

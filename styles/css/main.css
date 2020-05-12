@@ -362,14 +362,14 @@ html {
           box-sizing: inherit;
 }
 
+/**
+ * Base body styles
+ * 1. Prevents side scroll caused by positioned patterns/images
+ */
 body {
   background: #fff;
   text-align: center;
   overflow-x: hidden;
-  /**
-   * @TODO
-   * take out text align center from all sections base layout
-   */
 }
 
 /**
@@ -390,9 +390,6 @@ img {
   height: auto;
 }
 
-/**
- * Basic styles for links
- */
 a {
   color: #929baa;
   text-decoration: none;
@@ -406,9 +403,6 @@ ul {
   list-style: none;
 }
 
-/**
- * Basic typography style for copy text
- */
 body {
   color: #4a5668;
   color: #929baa;
@@ -491,15 +485,6 @@ h6 {
 }
 
 /**
- * Clear inner floats
- */
-.clearfix::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-/**
  * Main content containers
  * 1. Make the container full-width with a maximum width
  * 2. Center it in the viewport
@@ -527,19 +512,6 @@ h6 {
     padding-right: 2.5rem;
     /* 3 */
   }
-}
-
-/**
- * Hide text while making it readable for screen readers
- * 1. Needed in WebKit-based browsers because of an implementation bug;
- *    See: https://code.google.com/p/chromium/issues/detail?id=457146
- */
-.hide-text {
-  overflow: hidden;
-  padding: 0;
-  /* 1 */
-  text-indent: 101%;
-  white-space: nowrap;
 }
 
 /**
@@ -635,15 +607,15 @@ h6 {
     margin-bottom: 0;
   }
   .map__text::after {
+    content: "";
     position: absolute;
+    top: 100%;
+    left: calc(50% - 8px);
     width: 0;
     height: 0;
     border: 8px solid transparent;
     border-top-color: #fcb72c;
     border-bottom-width: 0;
-    content: "";
-    top: 100%;
-    left: calc(50% - 8px);
   }
   .new-york {
     top: 53px;
@@ -706,14 +678,17 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: white;
   padding-top: 22px;
   padding-bottom: 22px;
   position: relative;
   z-index: 1;
-  background: white;
 }
 
 .nav__logo {
@@ -745,11 +720,6 @@ h6 {
 }
 
 .nav__links--mobile {
-  background: #4a5668;
-  text-align: left;
-  position: absolute;
-  top: 64px;
-  left: -100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -763,12 +733,17 @@ h6 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  background: #4a5668;
+  opacity: 0;
+  text-align: left;
+  position: absolute;
+  top: 64px;
+  left: -100%;
   width: 256px;
   height: calc(100vh - 64px);
   padding: 4rem 1.5rem 1.5rem;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
-  opacity: 0;
 }
 
 .nav__links--mobile .link {
@@ -825,8 +800,16 @@ h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .nav__links li:not(:last-child) {
     margin-right: 2rem;
@@ -852,7 +835,6 @@ h6 {
 
 .header {
   background: center / cover no-repeat;
-  text-align: center;
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -891,14 +873,11 @@ h6 {
   }
 }
 
-/*
-   Home page header
-   ========================================================================== */
 .header--home {
   background-image: url("../../../assets/images/home-hero-mobile.jpg");
+  text-align: center;
   height: 650px;
   padding-top: 115px;
-  text-align: center;
   margin-bottom: 0;
 }
 
@@ -1026,16 +1005,12 @@ h6 {
   }
 }
 
-/*
-   Small size layout
-   ========================================================================== */
 .intro {
   padding-top: 120px;
   padding-bottom: 83px;
 }
 
 .intro__card {
-  text-align: center;
   max-width: 350px;
   margin: 0 auto 4rem;
 }
@@ -1050,9 +1025,6 @@ h6 {
   margin-bottom: 1.5rem;
 }
 
-/*
-   Medium size layout
-   ========================================================================== */
 @media (min-width: 768px) {
   .intro {
     padding-top: 122px;
@@ -1063,9 +1035,16 @@ h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     max-width: 573px;
     margin-bottom: 2.5rem;
     position: relative;
@@ -1098,9 +1077,16 @@ h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     padding-top: 160px;
     padding-bottom: 147px;
   }
@@ -1126,11 +1112,7 @@ h6 {
   }
 }
 
-/*
-   Layout
-   ========================================================================== */
 .main-content {
-  text-align: center;
   margin-bottom: 7.5rem;
   position: relative;
 }
@@ -1194,9 +1176,15 @@ h6 {
   }
 }
 
-/*
-   Arrow images
-   ========================================================================== */
+@media (min-width: 1454px) {
+  .main-content {
+    position: initial;
+  }
+  .positioning-container {
+    position: relative;
+  }
+}
+
 .main-content::before {
   content: url("../../../assets/patterns/left-downward-arrow.svg");
   position: absolute;
@@ -1206,9 +1194,6 @@ h6 {
   content: url("../../../assets/patterns/right-arrow.svg");
 }
 
-/*
-   Arrow positioning
-   ========================================================================== */
 .arrow-pos-1::before {
   right: -420px;
   top: 165px;
@@ -1224,6 +1209,12 @@ h6 {
 @media (min-width: 1024px) {
   .arrow-pos-1::before {
     right: -135px;
+  }
+}
+
+@media (min-width: 1454px) {
+  .arrow-pos-1::before {
+    right: -10px;
   }
 }
 
@@ -1244,6 +1235,12 @@ h6 {
   }
 }
 
+@media (min-width: 1454px) {
+  .arrow-pos-2::before {
+    left: -10px;
+  }
+}
+
 .arrow-pos-3::before {
   right: -520px;
   top: 0px;
@@ -1259,6 +1256,12 @@ h6 {
 @media (min-width: 1024px) {
   .arrow-pos-3::before {
     right: -515px;
+  }
+}
+
+@media (min-width: 1454px) {
+  .arrow-pos-3::before {
+    right: -392px;
   }
 }
 
@@ -1281,6 +1284,12 @@ h6 {
   }
 }
 
+@media (min-width: 1454px) {
+  .arrow-pos-4::before {
+    right: -42px;
+  }
+}
+
 .arrow-pos-5::before {
   left: -105px;
   top: 0;
@@ -1292,9 +1301,12 @@ h6 {
   }
 }
 
-/*
-   Semicircle images
-   ========================================================================== */
+@media (min-width: 1454px) {
+  .arrow-pos-5::before {
+    left: -10px;
+  }
+}
+
 @media (min-width: 768px) {
   .main-content::after {
     content: url("../../../assets/patterns/circle.svg");
@@ -1319,8 +1331,17 @@ h6 {
   }
 }
 
+@media (min-width: 1454px) {
+  .main-content::after {
+    right: -350px;
+  }
+  .main-content--reversed::after {
+    right: initial;
+    left: -350px;
+  }
+}
+
 .sub-content {
-  text-align: center;
   margin-bottom: 145px;
 }
 
@@ -1632,7 +1653,6 @@ h6 {
 .download {
   background-color: #4a5668;
   position: relative;
-  text-align: center;
   padding-top: 88px;
   padding-bottom: 76px;
 }
@@ -1728,7 +1748,6 @@ h6 {
 
 .footer {
   background: #363f4a;
-  text-align: center;
   padding-top: 64px;
   padding-bottom: 88px;
 }
@@ -1745,9 +1764,16 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 120px;
   margin: 0 auto;
 }
@@ -1774,9 +1800,6 @@ h6 {
   margin-bottom: 2.6rem;
 }
 
-/*
-   Medium screens layout
-   ========================================================================== */
 @media (min-width: 768px) {
   .footer {
     padding-top: 35px;

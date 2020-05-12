@@ -1,6 +1,7 @@
-/**
- * Basic typography style for copy text
- */
+// ==========================================================================
+// Basic typography style for copy text
+// ==========================================================================
+
 body {
   color: $clr-dark-navy;
   color: $clr-mid-grey;
@@ -38,8 +39,6 @@ h2 {
 
 
 h3 {
-  // font-size: 2.5rem;
-  // letter-spacing: -1.79px;
   font-size: 1.5rem;
   letter-spacing: -1.07px;
   line-height: 1.167;
@@ -67,6 +66,9 @@ h6 {
 }
 
 
+//
+// Medium and Large screen typography
+// ==========================================================================
 
 @media (min-width: $bp-medium) {
   

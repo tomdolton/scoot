@@ -8,7 +8,6 @@
 
 .header {
   background: center / cover no-repeat;
-  text-align: center;
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -35,7 +34,6 @@
 }
 
 
-
 .header__title {
   max-width: 573px;
   margin: 0 auto;
@@ -47,15 +45,15 @@
 
 
 
-/*
-   Home page header
-   ========================================================================== */
+//
+// Home page header
+// ==========================================================================
 
 .header--home {
   background-image: url("../../../assets/images/home-hero-mobile.jpg");
+  text-align: center;
   height: 650px;
   padding-top: 115px;
-  text-align: center;
   margin-bottom: 0;
 
   @media (min-width: $bp-medium) {
@@ -68,7 +66,6 @@
     padding-top: 153px;
   }
 }
-
 
 
 .header--home__textbox {
@@ -84,7 +81,6 @@
 }
 
 
-
 .header--home__title {
   margin-bottom: 1.5rem;
 
@@ -92,7 +88,6 @@
     margin-bottom: 2.5rem;
   }
 }
-
 
 
 .header--home__text {
@@ -104,7 +99,6 @@
     margin-bottom: 2.5rem;
   }
 }
-
 
 
 @media (min-width: $bp-large) {
@@ -120,6 +114,7 @@
 //
 // Patterns psuedo elements
 // ==========================================================================
+
 // Arrow
 .header--home__textbox::after {
   content: url("../../../assets/patterns/right-arrow.svg");
@@ -138,6 +133,7 @@
   }
 }
 
+
 // Other patterns on large screen
 @media (min-width: $bp-large) {
 
@@ -149,6 +145,7 @@
     bottom: 135px;
   }
 
+
   // White circles
   .header--home::after {
     content: url("../../../assets/patterns/white-circles.svg");
@@ -156,9 +153,7 @@
     right: -48px;
     bottom: 164px;
   }
-
 }
-
 
 
 
@@ -195,5 +190,3 @@
     background-image: url("../../../assets/images/careers-locations-hero-desktop.jpg");
   }
 }
-
-

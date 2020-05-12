@@ -29,10 +29,12 @@ $max-width-large: 1110px + 40px + 40px;
 
 
 // Breakpoints
-  $bp-small: 320px;
+  $bp-small: 330px;
   $bp-medium: 768px;
   $bp-large: 1024px;
+  $bp-xlarge: 1454px;
 
 
-
+  
+// Standard transition time for all active states
   $transition: 0.2s ease-out;

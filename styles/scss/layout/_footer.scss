@@ -4,11 +4,9 @@
 
 .footer {
   background: $clr-dark-stone;
-  text-align: center;
   padding-top: 64px;
   padding-bottom: 88px;
 }
-
 
 
 .footer__links {
@@ -16,16 +14,13 @@
 }
 
 
-
 .footer__links .link {
   margin-bottom: 1rem;
 }
 
 
-
 .footer__socials {
-  display: flex;
-  justify-content: space-between;
+  @include flex;
   max-width: 120px;
   margin: 0 auto;
   
@@ -43,7 +38,6 @@
 }
 
 
-
 .footer__logo {
   background: center / contain no-repeat url("../../../assets/logo-white.svg");
   fill: white;
@@ -55,39 +49,42 @@
 
 
 
-/*
-   Medium screens layout
-   ========================================================================== */
+//
+// Medium screens layout
+// ==========================================================================
 
-  @media (min-width: $bp-medium) {
+@media (min-width: $bp-medium) {
 
-    .footer {
-      padding-top: 35px;
-      padding-bottom: 32px;
-    }
-
-    .footer .container {
-      @include flex(row, flex-start);
-    }
-
-    .footer__links {
-      @include flex;
-      margin-bottom: 0;
-
-      & .link {
-        padding: 0;
-        margin-right: 2rem;
-        margin-bottom: 0;
-      }
+  .footer {
+    padding-top: 35px;
+    padding-bottom: 32px;
   }
- 
-    
-    .footer__logo {
-      margin-right: 58px;
+
+
+  .footer .container {
+    @include flex(row, flex-start);
+  }
+
+
+  .footer__links {
+    @include flex;
+    margin-bottom: 0;
+
+    & .link {
+      padding: 0;
+      margin-right: 2rem;
       margin-bottom: 0;
     }
+}
 
-    .footer__socials {
-      margin-right: 0;
-    }
+  
+  .footer__logo {
+    margin-right: 58px;
+    margin-bottom: 0;
   }
+
+
+  .footer__socials {
+    margin-right: 0;
+  }
+}

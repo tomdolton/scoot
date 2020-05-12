@@ -2,9 +2,9 @@
 // Intro styles & layout
 // -----------------------------------------------------------------------------
 
-/*
-   Small size layout
-   ========================================================================== */
+//
+// Small size layout
+// ==========================================================================
 
 .intro {
   padding-top: 120px;
@@ -12,22 +12,17 @@
 }
 
 
-
 .intro__card {
-  text-align: center;
   max-width: 350px;
   margin: 0 auto 4rem;
 }
-
 
 
 .intro__image {
   width: 56px;
   height: 56px;
   margin-bottom: 1.5rem;
-
 }
-
 
 
 .intro__title {
@@ -36,9 +31,9 @@
 
 
 
-/*
-   Medium size layout
-   ========================================================================== */
+//
+// Medium size layout
+// ==========================================================================
 
 @media (min-width: $bp-medium) {
 
@@ -48,16 +43,13 @@
   }
 
 
-
   .intro__card {
     text-align: left;
-    display: flex;
-    justify-content: space-between;
+    @include flex($align: stretch);
     max-width: 573px;
     margin-bottom: 2.5rem;
     position: relative;
   }
-
 
 
   .intro__image {
@@ -66,17 +58,14 @@
   }
 
 
-
   .intro__textbox {
     max-width: 400px;
   }
 
 
-
   .intro__title {
     margin-bottom: 1.6875rem;
   }
-
 
 
   // Grey line between images
@@ -94,15 +83,18 @@
 }
 
 
+
+//
+// Large size layout
+// ==========================================================================
+
 @media (min-width: $bp-large) {
 
   .intro {
-    display: flex;
-    justify-content: space-between;
+    @include flex($align: stretch);
     padding-top: 160px;
     padding-bottom: 147px;
   }
-
 
 
   .intro__card {
@@ -116,11 +108,9 @@
   }
 
 
-
   .intro__image {
     margin-bottom: 2.5rem;
   }
-
 
 
   // Grey line between images

@@ -2,12 +2,11 @@
 // Main-content sections styles & layout
 // -----------------------------------------------------------------------------
 
-/*
-   Layout
-   ========================================================================== */
+//
+// Layout
+// ==========================================================================
 
 .main-content {
-  text-align: center;
   margin-bottom: 7.5rem;
   position: relative;
 }
@@ -76,10 +75,24 @@
 }
 
 
+// X Large screen layout
+@media (min-width: $bp-xlarge) {
 
-/*
-   Arrow images
-   ========================================================================== */
+  .main-content {
+    position: initial;
+  }
+
+
+  .positioning-container {
+    position: relative;
+  }
+}
+
+
+
+//
+// Arrow images
+// ==========================================================================
 
 // Arrow images standard position (Home page 1st position)
 .main-content::before {
@@ -94,11 +107,11 @@
 
 
 
-/*
-   Arrow positioning
-   ========================================================================== */
+//
+// Arrow positioning
+// ==========================================================================
 
-// Home page 1st position // Other page...
+// Home page 1st position / Careers page 1st position
 .arrow-pos-1::before {
   right: -420px;
   top: 165px;
@@ -111,10 +124,15 @@
   @media (min-width: $bp-large) {
     right: -135px;
   }
+
+  @media (min-width: $bp-xlarge) {
+    right: -10px;
+  }
+
 }
 
 
-// Home page 2nd position // Maybe other page..?
+// Home page 2nd position
 .arrow-pos-2::before {
   left: -200px;
   top: -10px;
@@ -125,6 +143,10 @@
 
   @media (min-width: $bp-large) {
     left: -135px;
+  }
+
+  @media (min-width: $bp-xlarge) {
+    left: -10px;
   }
 }
 
@@ -141,6 +163,10 @@
 
   @media (min-width: $bp-large) {
     right: -515px;
+  }
+
+  @media (min-width: $bp-xlarge) {
+    right: -392px;
   }
 }
 
@@ -159,6 +185,10 @@
   @media (min-width: $bp-large) {
     right: -165px;
   }
+
+  @media (min-width: $bp-xlarge) {
+    right: -42px;
+  }
 }
 
 
@@ -170,13 +200,17 @@
   @media (min-width: $bp-large) {
     left: -135px;
   }
+
+  @media (min-width: $bp-xlarge) {
+    left: -10px;
+  }
 }
 
 
 
-/*
-   Semicircle images
-   ========================================================================== */
+//
+// Semicircle images
+// ==========================================================================
 
 //  Medium screens
 @media (min-width: $bp-medium) {
@@ -208,5 +242,20 @@
   .main-content--reversed::after {
     right: initial;
     left: -475px;
+  }
+}
+
+
+// X Large screens
+@media (min-width: $bp-xlarge) {
+
+  .main-content::after {
+    right: -350px;
+  }
+
+
+  .main-content--reversed::after {
+    right: initial;
+    left: -350px;
   }
 }

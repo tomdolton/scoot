@@ -2,21 +2,17 @@
 // Nav styles & layout
 // -----------------------------------------------------------------------------
 
-
 //
 // Base nav container styles
 // ==========================================================================
-.nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 
+.nav {
+  @include flex;
+  background: white;
   padding-top: 22px;
   padding-bottom: 22px;
-
   position: relative; // Make visible above modal when active
   z-index: 1;
-  background: white;
 }
 
 
@@ -59,30 +55,26 @@
 
 
 .nav__links--mobile {
+  @include flex(column, space-between, flex-start);
+
   background: $clr-dark-navy;
+  opacity: 0;
   text-align: left;
 
   position: absolute;
   top: 64px;
   left: -100%;
   
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  
   width: 256px;
   height: calc(100vh - 64px);
   padding: 4rem 1.5rem 1.5rem;
   
   transition: $transition;
-  opacity: 0;
   
   & .link {
     color: $clr-white;
     font-size: 1.125rem;
     
-
     &:hover {
       color: $clr-yellow;
     }
@@ -123,6 +115,7 @@
 //
 // Medium screens nav
 // ==========================================================================
+
 @media (min-width: $bp-medium) {
 
   .nav {
@@ -143,8 +136,7 @@
 
 
   .nav__links {
-    display: flex;
-    justify-content: space-around;
+    @include flex;
   
     & li:not(:last-child) {
       margin-right: 2rem;
@@ -162,6 +154,7 @@
 //
 // Large screens nav
 // ==========================================================================
+
 @media (min-width: $bp-large) {
 
   .nav {

@@ -56,18 +56,17 @@
     padding: 2px 34px;
     margin-bottom: 0;
 
+    // Box arrow pointer
     &::after {
+      content: "";
       position: absolute;
+      top: 100%;
+      left: calc(50% - 8px);
       width: 0;
       height: 0;
       border: 8px solid transparent;
       border-top-color: $clr-yellow;
       border-bottom-width: 0;
-      content: "";
-      top: 100%;
-      left: calc(50% - 8px);
-    
-
     }
   }
 
