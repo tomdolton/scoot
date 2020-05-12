@@ -562,6 +562,7 @@ h6 {
   background: #fcb72c;
   color: #fff;
   font-family: "Space Mono", monospace;
+  font-size: 0.9375rem;
   line-height: 1.667;
   display: inline-block;
   border: 3px #fcb72c solid;
@@ -582,6 +583,8 @@ h6 {
   font-family: "Space Mono", monospace;
   font-size: 0.9375rem;
   padding: 0.5rem;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .link:hover, .link:active, .link:focus {
@@ -768,9 +771,13 @@ h6 {
   opacity: 0;
 }
 
-.nav__links--mobile a {
+.nav__links--mobile .link {
   color: #fff;
   font-size: 1.125rem;
+}
+
+.nav__links--mobile .link:hover {
+  color: #fcb72c;
 }
 
 .nav__links--mobile li {
@@ -1418,6 +1425,10 @@ h6 {
   cursor: pointer;
 }
 
+.faq__item:hover {
+  background: #fff4e0;
+}
+
 @media (min-width: 768px) {
   .faq__item {
     padding: 2rem 2rem 2rem 2.5rem;
@@ -1745,6 +1756,15 @@ h6 {
   margin-right: 24.5px;
 }
 
+.footer__socials path {
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.footer__socials li:hover path {
+  fill: #fff;
+}
+
 .footer__logo {
   background: center/contain no-repeat url("../../../assets/logo-white.svg");
   fill: white;
@@ -1758,6 +1778,10 @@ h6 {
    Medium screens layout
    ========================================================================== */
 @media (min-width: 768px) {
+  .footer {
+    padding-top: 35px;
+    padding-bottom: 32px;
+  }
   .footer .container {
     display: -webkit-box;
     display: -ms-flexbox;

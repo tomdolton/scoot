@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // Links component
 // -----------------------------------------------------------------------------
-
+// Used in header, footer and mobile navs
 
 .link {
   color: $clr-mid-grey;
@@ -9,6 +9,7 @@
   font-family: $ff-headings;
   font-size: 0.9375rem;
   padding: 0.5rem;
+  transition: $transition;
   
   @include on-event {
     color: $clr-yellow;

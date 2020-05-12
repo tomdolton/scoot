@@ -29,6 +29,10 @@
   margin-bottom: 1rem;
   position: relative;
   cursor: pointer;
+
+  &:hover {
+    background: $clr-light-yellow;
+  }
   
   @media (min-width: $bp-medium) {
     padding: 2rem 2rem 2rem 2.5rem;

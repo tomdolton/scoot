@@ -28,9 +28,17 @@
   justify-content: space-between;
   max-width: 120px;
   margin: 0 auto;
-
+  
   & li:not(:last-child) {
     margin-right: 24.5px;
+  }
+  
+  & path {
+    transition: $transition;
+  }
+
+  & li:hover path {
+    fill: $clr-white;
   }
 }
 
@@ -52,6 +60,11 @@
    ========================================================================== */
 
   @media (min-width: $bp-medium) {
+
+    .footer {
+      padding-top: 35px;
+      padding-bottom: 32px;
+    }
 
     .footer .container {
       @include flex(row, flex-start);
@@ -77,7 +90,4 @@
     .footer__socials {
       margin-right: 0;
     }
-  
-
-
   }
