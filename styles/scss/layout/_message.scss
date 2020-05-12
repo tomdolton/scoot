@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// Message styles & layout
+// -----------------------------------------------------------------------------
+
+.message {
+  margin-bottom: 4.5rem;
+}
+
+.message__title {
+  text-transform: capitalize;
+  max-width: 457px;
+  margin: 0 auto 2rem;
+}
+
+
+.message__text {
+  max-width: 573px;
+  margin: 0 auto 2rem;
+}
+
+
+//
+// Medium screens
+// ==========================================================================
+
+@media (min-width: $bp-medium) {
+
+  .message {
+    margin-bottom: 7.5rem;
+  }
+}
+
+@media (min-width: $bp-large) {
+
+  .message {
+    @include flex(row, flex-start);
+    text-align: left;
+  }
+
+  .message__title {
+    text-transform: Initial;
+    max-width: 350px;
+    margin: 0 30px 0 0;
+  }
+  
+  .message__text {
+    max-width: 445px;
+    margin: 0;
+  }
+
+  .message__btn {
+    margin-left: auto;
+  }
+}

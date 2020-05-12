@@ -1,0 +1,148 @@
+// -----------------------------------------------------------------------------
+// Map component
+// -----------------------------------------------------------------------------
+
+.map {
+  margin-bottom: 4.5rem;
+
+  @media (min-width: $bp-large) {
+    margin-bottom: 7.5rem;
+  }
+}
+
+
+// Allows for absolute positioning of map__text on larger screens
+.map__inner {
+  position: relative;
+  max-width: 689px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.map__image {
+  margin-bottom: 2.5rem;
+}
+
+
+.map__text {
+  background: $clr-light-yellow;
+  font-size: 1.5rem;
+  line-height: 1.167;
+  letter-spacing: -1.07px;
+  padding: 1.375rem;
+  margin-bottom: 1rem;
+}
+
+
+
+//
+// Medium screens
+// ==========================================================================
+
+@media (min-width: $bp-medium) {
+
+  .map {
+    margin-bottom: 4rem;
+  }
+
+
+  .map__text {
+    position: absolute;
+    background: $clr-yellow;
+    font-size: 0.8125rem;
+    letter-spacing: -0.58px;
+    line-height: 2.154;
+    padding: 2px 34px;
+    margin-bottom: 0;
+
+    &::after {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 8px solid transparent;
+      border-top-color: $clr-yellow;
+      border-bottom-width: 0;
+      content: "";
+      top: 100%;
+      left: calc(50% - 8px);
+    
+
+    }
+  }
+
+
+  // Positioning each map__text city label
+  .new-york {
+    top: 53px;
+    left: 96px;
+  }
+
+  .london {
+    top: 26px;
+    left: 252px;
+  }
+
+  .yokohama {
+    top: 64px;
+    left: 530px;
+  }
+
+  .jakarta {
+    top: 169px;
+    left: 483px;
+  }
+}
+
+
+
+//
+// Large screens
+// ==========================================================================
+
+@media (min-width: 1190px) {
+
+  .map {
+    margin-bottom: 7.5rem;
+  }
+
+
+  .map__inner {
+    max-width: none;
+  }
+
+
+  .map__text {
+    font-size: 1.45rem;
+    padding: 2px 34px;
+    padding: 11px 54px;
+
+    &::after {
+      border-width: 16px;
+      border-bottom-width: 0;
+      left: calc(50% - 16px);
+    }
+  }
+
+
+    // Positioning each map__text city label
+    .new-york {
+      top: 64px;
+      left: 147px;
+    }
+  
+    .london {
+      top: 18px;
+      left: 403px;
+    }
+  
+    .yokohama {
+      top: 78px;
+      left: 848px;
+    }
+  
+    .jakarta {
+      top: 335px - 88px;
+      left: 876px - 103px;
+    }
+}

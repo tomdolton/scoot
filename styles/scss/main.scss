@@ -18,7 +18,8 @@
 // 4. Components
 @import
   'components/button',
-  'components/links';
+  'components/links',
+  'components/map';
 
 // 5. Layout-related sections
 @import
@@ -29,6 +30,7 @@
   'layout/sub-content',
   'layout/faq',
   'layout/jobs',
+  'layout/message',
   'layout/download',
   'layout/footer';
 

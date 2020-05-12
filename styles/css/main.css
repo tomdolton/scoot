@@ -588,6 +588,113 @@ h6 {
   color: #fcb72c;
 }
 
+.map {
+  margin-bottom: 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  .map {
+    margin-bottom: 7.5rem;
+  }
+}
+
+.map__inner {
+  position: relative;
+  max-width: 689px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.map__image {
+  margin-bottom: 2.5rem;
+}
+
+.map__text {
+  background: #fff4e0;
+  font-size: 1.5rem;
+  line-height: 1.167;
+  letter-spacing: -1.07px;
+  padding: 1.375rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .map {
+    margin-bottom: 4rem;
+  }
+  .map__text {
+    position: absolute;
+    background: #fcb72c;
+    font-size: 0.8125rem;
+    letter-spacing: -0.58px;
+    line-height: 2.154;
+    padding: 2px 34px;
+    margin-bottom: 0;
+  }
+  .map__text::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #fcb72c;
+    border-bottom-width: 0;
+    content: "";
+    top: 100%;
+    left: calc(50% - 8px);
+  }
+  .new-york {
+    top: 53px;
+    left: 96px;
+  }
+  .london {
+    top: 26px;
+    left: 252px;
+  }
+  .yokohama {
+    top: 64px;
+    left: 530px;
+  }
+  .jakarta {
+    top: 169px;
+    left: 483px;
+  }
+}
+
+@media (min-width: 1190px) {
+  .map {
+    margin-bottom: 7.5rem;
+  }
+  .map__inner {
+    max-width: none;
+  }
+  .map__text {
+    font-size: 1.45rem;
+    padding: 2px 34px;
+    padding: 11px 54px;
+  }
+  .map__text::after {
+    border-width: 16px;
+    border-bottom-width: 0;
+    left: calc(50% - 16px);
+  }
+  .new-york {
+    top: 64px;
+    left: 147px;
+  }
+  .london {
+    top: 18px;
+    left: 403px;
+  }
+  .yokohama {
+    top: 78px;
+    left: 848px;
+  }
+  .jakarta {
+    top: 247px;
+    left: 773px;
+  }
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1456,6 +1563,58 @@ h6 {
   .jobs__item {
     padding: 2rem 4rem 2.125rem 2.5rem;
     margin-bottom: 1.5rem;
+  }
+}
+
+.message {
+  margin-bottom: 4.5rem;
+}
+
+.message__title {
+  text-transform: capitalize;
+  max-width: 457px;
+  margin: 0 auto 2rem;
+}
+
+.message__text {
+  max-width: 573px;
+  margin: 0 auto 2rem;
+}
+
+@media (min-width: 768px) {
+  .message {
+    margin-bottom: 7.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+  .message__title {
+    text-transform: Initial;
+    max-width: 350px;
+    margin: 0 30px 0 0;
+  }
+  .message__text {
+    max-width: 445px;
+    margin: 0;
+  }
+  .message__btn {
+    margin-left: auto;
   }
 }
 
