@@ -24,11 +24,13 @@
 
 .faq__item {
   background: $clr-snow;
+  color: $clr-dark-navy;
   text-align: left;
   padding: 2rem 1.75rem 2rem 2rem;
   margin-bottom: 1rem;
   position: relative;
   cursor: pointer;
+  transition: $transition;
 
   &:hover {
     background: $clr-light-yellow;
