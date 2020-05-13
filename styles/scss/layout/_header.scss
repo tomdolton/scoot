@@ -8,6 +8,7 @@
 
 .header {
   background: center / cover no-repeat;
+  background-color: $clr-dark-stone;
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -52,18 +53,21 @@
 .header--home {
   background-image: url("../../../assets/images/home-hero-mobile.jpg");
   text-align: center;
-  height: 650px;
   padding-top: 115px;
+  padding-bottom: 179px;
   margin-bottom: 0;
 
   @media (min-width: $bp-medium) {
     background-image: url("../../../assets/images/home-hero-tablet.jpg");
     padding-left: 0;
+    padding-top: 137px;
+    padding-bottom: 217px;
   }
 
   @media (min-width: $bp-large) {
     background-image: url("../../../assets/images/home-hero-desktop.jpg");
     padding-top: 153px;
+    padding-bottom: 152px;
   }
 }
 

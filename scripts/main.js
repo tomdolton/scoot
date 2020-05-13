@@ -48,4 +48,6 @@ function showAnswer() {
 
 for (const coll of collapsible) {
   coll.addEventListener("click", showAnswer);
+  coll.addEventListener("focus", showAnswer);
+  coll.addEventListener("focusout", showAnswer);
 }

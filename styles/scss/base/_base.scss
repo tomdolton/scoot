@@ -60,6 +60,10 @@ a {
   @include on-event {
     color: $clr-yellow;
   }
+
+  &:focus {
+    outline: 3px dashed $clr-yellow;
+  }
 }
 
 

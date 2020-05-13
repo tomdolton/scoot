@@ -32,7 +32,8 @@
     transition: $transition;
   }
 
-  & li:hover path {
+  & a:hover path,
+  & a:focus path {
     fill: $clr-white;
   }
 }

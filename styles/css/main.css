@@ -399,6 +399,10 @@ a:hover, a:active, a:focus {
   color: #fcb72c;
 }
 
+a:focus {
+  outline: 3px dashed #fcb72c;
+}
+
 ul {
   list-style: none;
 }
@@ -713,6 +717,11 @@ h6 {
   height: 16px;
   cursor: pointer;
   display: inline-block;
+  border: none;
+}
+
+.nav__hamburger:focus {
+  outline: 3px dashed #fcb72c;
 }
 
 .nav__hamburger--active {
@@ -733,6 +742,7 @@ h6 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  visibility: hidden;
   background: #4a5668;
   opacity: 0;
   text-align: left;
@@ -742,8 +752,8 @@ h6 {
   width: 256px;
   height: calc(100vh - 64px);
   padding: 4rem 1.5rem 1.5rem;
-  -webkit-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
+  -webkit-transition: left 0.2s ease-out, opacity 0.2s ease-out;
+  transition: left 0.2s ease-out, opacity 0.2s ease-out;
 }
 
 .nav__links--mobile .link {
@@ -760,6 +770,7 @@ h6 {
 }
 
 .nav__links--active {
+  visibility: visible;
   left: 0;
   opacity: 1;
 }
@@ -835,6 +846,7 @@ h6 {
 
 .header {
   background: center / cover no-repeat;
+  background-color: #363f4a;
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -876,8 +888,8 @@ h6 {
 .header--home {
   background-image: url("../../../assets/images/home-hero-mobile.jpg");
   text-align: center;
-  height: 650px;
   padding-top: 115px;
+  padding-bottom: 179px;
   margin-bottom: 0;
 }
 
@@ -885,6 +897,8 @@ h6 {
   .header--home {
     background-image: url("../../../assets/images/home-hero-tablet.jpg");
     padding-left: 0;
+    padding-top: 137px;
+    padding-bottom: 217px;
   }
 }
 
@@ -892,6 +906,7 @@ h6 {
   .header--home {
     background-image: url("../../../assets/images/home-hero-desktop.jpg");
     padding-top: 153px;
+    padding-bottom: 152px;
   }
 }
 
@@ -1790,7 +1805,8 @@ h6 {
   transition: 0.2s ease-out;
 }
 
-.footer__socials li:hover path {
+.footer__socials a:hover path,
+.footer__socials a:focus path {
   fill: #fff;
 }
 

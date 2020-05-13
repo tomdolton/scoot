@@ -46,6 +46,11 @@
   height: 16px;
   cursor: pointer;
   display: inline-block;
+  border: none;
+
+  &:focus {
+    outline: 3px dashed $clr-yellow;
+  }
 }
 
 
@@ -56,7 +61,7 @@
 
 .nav__links--mobile {
   @include flex(column, space-between, flex-start);
-
+  visibility: hidden;
   background: $clr-dark-navy;
   opacity: 0;
   text-align: left;
@@ -69,7 +74,8 @@
   height: calc(100vh - 64px);
   padding: 4rem 1.5rem 1.5rem;
   
-  transition: $transition;
+  transition: left $transition,
+              opacity $transition;
   
   & .link {
     color: $clr-white;
@@ -87,6 +93,7 @@
 
 
 .nav__links--active {
+  visibility: visible;
   left: 0;
   opacity: 1;
 }
